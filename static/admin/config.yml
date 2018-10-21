@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: mozbie/simple-gatsby-blog
 
 media_folder: static/assets
 public_folder: assets
@@ -11,6 +12,6 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:      
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
